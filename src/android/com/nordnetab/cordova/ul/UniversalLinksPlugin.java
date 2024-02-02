@@ -181,7 +181,7 @@ public class UniversalLinksPlugin extends CordovaPlugin {
         Uri launchUri = intent.getData();
 
         // if app was not launched by the url - ignore
-        if (!Intent.ACTION_VIEW.equals(action) || launchUri == null) {
+        if ((!Intent.ACTION_VIEW.equals(action) && !NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) || launchUri == null) {
             return;
         }
 
