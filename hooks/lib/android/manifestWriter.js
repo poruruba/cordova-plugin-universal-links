@@ -270,6 +270,10 @@ function createIntentFilter(host, scheme, pathName) {
             '$': {
                 'android:name': 'android.intent.action.VIEW'
             }
+        }, {
+            '$': {
+                'android:name': 'android.nfc.action.NDEF_DISCOVERED'
+            }
         }],
         'category': [{
             '$': {
